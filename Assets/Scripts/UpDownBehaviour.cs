@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class UpDownBehaviour : MonoBehaviour
 {
-
     public float offset;
-    public float yScale;
-
+    public float yscale;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
 	}
 	
 	// Update is called once per frame
 	void Update ()
-	{
-	    Vector3 newPosition = new Vector3(transform.position.x,
-	       yScale * Mathf.Cos(Time.realtimeSinceStartup) + offset,
-	        transform.position.z);
-
-	    transform.position = newPosition;
+    {
+        Vector3 newposition = new Vector3(transform.position.x, Mathf.Cos(Time.realtimeSinceStartup) + offset,
+            transform.position.z);
+        transform.position = newposition;
     }
 }
