@@ -1,10 +1,13 @@
-﻿using Tobii.Gaming;
+﻿using System;
+using System.Diagnostics;
+using Tobii.Gaming;
 using UnityEngine;
 using UnityEngine.UI;
+using Variables;
 
 public class UITextBehaviour : MonoBehaviour
 {
-    [SerializeField] private Vector2Variable _eyePosition;
+    [SerializeField] private Variable displayVariable;
 
     [SerializeField] private Text _textComponent;
 
@@ -16,7 +19,6 @@ public class UITextBehaviour : MonoBehaviour
 
     private void Update()
     {
-        _eyePosition.value = TobiiAPI.GetGazePoint().Screen;
-        _textComponent.text = _eyePosition.value.ToString();
+        _textComponent.text = displayVariable.Value.ToString();
     }
 }

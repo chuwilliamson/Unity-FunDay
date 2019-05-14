@@ -9,7 +9,12 @@ namespace Scripts
         private GazeAware _gazeAware;
         public GazeAwareResponse GazeResponse;
 
-        private void Start()
+        public bool Focused
+        {
+            get { return _gazeAware.HasGazeFocus; }
+        }
+
+        private void Awake()
         {
             _gazeAware = GetComponent<GazeAware>();
         }
