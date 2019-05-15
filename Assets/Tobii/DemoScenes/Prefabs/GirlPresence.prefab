@@ -2756,8 +2756,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5d69e9b60bfc2448000325cec5ecad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: {r: 0, g: 0.74509805, b: 1, a: 1}
-  inactive: {r: 0.011764707, g: 0.078431375, b: 0.098039225, a: 1}
+  active:
+    r: 0
+    g: 0.74509805
+    b: 1
+    a: 1
+  inactive:
+    r: 0.011764707
+    g: 0.078431375
+    b: 0.098039225
+    a: 1
 --- !u!114 &11436154
 MonoBehaviour:
   m_ObjectHideFlags: 1

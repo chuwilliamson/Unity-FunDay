@@ -1151,6 +1151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MarkIcon: {fileID: 459870}
   MaxDistance: 40
+  ActivationTime: 0
   DeactivationTime: 5
 --- !u!114 &11434808
 MonoBehaviour:

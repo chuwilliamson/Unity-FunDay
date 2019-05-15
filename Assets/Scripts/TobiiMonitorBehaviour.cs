@@ -1,21 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using CrossPlatformDevelopment.Variables;
+using Tobii.Gaming;
 using UnityEngine;
 
 public class TobiiMonitorBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private Variables.Vector2Variable EyePosition;
-    [SerializeField]
-    private Variables.StringVariable FocusedObject;
+    [SerializeField] private Vector2Variable EyePosition;
+
+    [SerializeField] private StringVariable FocusedObject;
 
     public string info;
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    private void Update()
     {
-        var focused = Tobii.Gaming.TobiiAPI.GetFocusedObject();
-        if(focused != null)
+        var focused = TobiiAPI.GetFocusedObject();
+        if (focused != null)
             FocusedObject.Value = focused.name;
-        EyePosition.Value = Tobii.Gaming.TobiiAPI.GetGazePoint().Screen;
+        EyePosition.Value = TobiiAPI.GetGazePoint().Screen;
     }
 }
